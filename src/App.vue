@@ -1,16 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<HelloWorld/>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import { defineComponent, getCurrentInstance, inject, onMounted } from 'vue';
+export interface TestProps {
+  name: string;
+}
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    
+  },
+  setup() {
+    console.log(inject('test'));
+    
+    onMounted(()=>{
+      getCurrentInstance()?.appContext.config.globalProperties.$echo()
+    })
   }
 });
 </script>
