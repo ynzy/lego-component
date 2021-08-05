@@ -1,0 +1,5 @@
+language: node_js # 使用的语言
+node_js: # 采用nvm管理node版本，这里写稳定版本即可
+  - node
+# cache: # 缓存依赖，默认是开启的
+# npm: false
