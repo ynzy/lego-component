@@ -1,8 +1,8 @@
 import { computed } from "vue";
 import { pick } from "lodash-es";
 import { CommonComponentProps } from "@/defaultProps";
+// Readonly 只读，Partial 把传入的类型变为可选类型
 const useComponentCommon = (
-  // Readonly 只读，Partial 把传入的类型变为可选类型
   props: Readonly<Partial<CommonComponentProps & { isEditing: boolean }>>,
   picks: string[]
 ) => {

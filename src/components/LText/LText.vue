@@ -1,48 +1,37 @@
-<!--  -->
 <template>
-  <!-- 可以使用 is attribute 来创建常规的 HTML 元素。 -->
-  <component
-    :is="tag"
-    :style="styleProps"
-    class="l-text-component"
-    @click="handleClick"
-  >
-    {{ text }}
+  <component :is="tag" :style="styleProps" class="l-text-component" @click="handleClick">
+    {{text}}
   </component>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from "vue";
-import useComponentCommon from "@/hooks/useComponentCommon";
-import {
-  transformToComponentProps,
-  textDefaultProps,
-  textStylePropNames,
-} from "@/defaultProps";
-const defaultProps = transformToComponentProps(textDefaultProps);
+import { defineComponent } from 'vue'
+import useComponentCommon from '../../hooks/useComponentCommon'
+import { transformToComponentProps, textDefaultProps, textStylePropNames } from '../../defaultProps'
+const defaultProps = transformToComponentProps(textDefaultProps)
+// array that contains style props
 export default defineComponent({
-  name: "l-text",
+  name: 'l-text',
   props: {
     tag: {
       type: String,
-      default: "div",
+      default: 'div'
     },
-    ...defaultProps,
+    ...defaultProps
   },
-  setup(props) {
-    const { styleProps, handleClick } = useComponentCommon(
-      props,
-      textStylePropNames
-    );
+  setup (props) {
+    // 重用并且简化
+    // 抽离并且获得 styleProps
+    const { styleProps, handleClick} = useComponentCommon(props, textStylePropNames)
     return {
-      styleProps,
-      handleClick,
-    };
-  },
-});
+       styleProps,
+       handleClick
+    }
+  }
+})
 </script>
-<style  scoped>
-h2.l-text-component,
-p.l-text-component {
+
+<style scoped>
+h2.l-text-component, p.l-text-component {
   margin-bottom: 0;
 }
 button.l-text-component {

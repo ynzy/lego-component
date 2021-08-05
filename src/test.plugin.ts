@@ -1,7 +1,7 @@
 import { App } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 const plugins = {
-  install: (app: App) => {
+  install: (app: App): void => {
     app.config.globalProperties.$echo = () => {
       console.log("a plugin");
     };

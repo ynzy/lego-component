@@ -124,7 +124,7 @@ export const transformToComponentProps = <T extends { [key: string]: any }>(
   props: T
 ) => {
   // 创建一个对象，这个对象的key与object对象相同，值是通过 iteratee 运行 object 中每个自身可枚举属性名字符串产生的。
-  const mapProps = mapValues(props, (item: any) => {
+  const mapProps = mapValues(props, (item) => {
     return {
       type: (item as any).constructor as StringConstructor,
       default: item,

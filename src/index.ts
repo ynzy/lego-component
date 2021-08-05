@@ -1,14 +1,19 @@
 import { App } from "vue";
 import LText from "./components/LText";
-const components = [LText];
+import LImage from "./components/LImage";
+import LShape from "./components/LShape";
 
-const install = (app: App) => {
+export * from "./defaultProps";
+
+const components = [LText, LImage, LShape];
+
+const install = (app: App): void => {
   components.forEach((component) => {
     app.component(component.name, component);
   });
 };
 
-export { install, LText };
+export { LText, LImage, LShape, install };
 
 export default {
   install,
