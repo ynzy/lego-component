@@ -40,7 +40,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" scoped>
+<style  scoped>
 h2.l-text-component,
 p.l-text-component {
   margin-bottom: 0;
