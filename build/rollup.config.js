@@ -7,6 +7,28 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { name } from "../package.json";
 const file = type => `dist/${name}.${type}.js`
 
+// 自定义插件
+function myExample() {
+  return {
+    name: "my-example", // 插件名称 
+    buildStart(options) {
+      console.log('in options', options);
+    },
+    load(id) {
+      console.log('in load', id);
+      return null;
+    },
+    transform(code, id) { // 转换代码
+      console.log('transform code', code);
+      console.log('transform id', id);
+      return null;
+    },
+    buildEnd(error) {
+      console.error(error);
+    }
+  }
+}
+
 // tsconfig
 /* const overrides = {
   compilerOptions: { 
@@ -25,13 +47,14 @@ const overrides = {
 }
 export { name, file }
 export default {
-  input: 'src/App.vue',
+  input: 'src/index.ts',
   output: {
     name,
     file: file('esm'),
     format: 'es'
   },
   plugins: [
+    // myExample(),
     nodeResolve(),
     typescript({tsconfigOverride: overrides}),
     vue(),
@@ -42,7 +65,6 @@ export default {
       ]
     }),
     // css({output: 'bundle.css'})
-
   ],
   external: ['vue', 'lodash-es'],
   /* external: (id) => {
