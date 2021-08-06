@@ -24,7 +24,7 @@ export default defineComponent({
     const { styleProps, handleClick} = useComponentCommon(props, textStylePropNames)
     return {
        styleProps,
-       handleClick,
+       handleClick
     }
   }
 })
