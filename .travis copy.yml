@@ -1,5 +1,13 @@
 language: node_js # 使用的语言
-node_js: # 采用nvm管理node版本，这里写稳定版本即可
+node_js: # 采用 nvm 管理 node 版本，这里写稳定版本即可
   - node
 # cache: # 缓存依赖，默认是开启的
 # npm: false
+deploy: # 发布 npm 包
+  provider: npm
+  email: "758922096@qq.com"
+  api_key: # travis encrypt --pro travis-ci.org YOUR_AUTH_TOKEN --add deploy.api_key
+    secure: ”加密过的key“
+  skip_cleanup: true # 不进行清空操作，不然会把我们打包的dist清掉
+  on:
+    tags: true # 只有在打 tags 时才会进行发布
