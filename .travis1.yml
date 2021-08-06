@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - node
+deploy:
+  provider: npm
+  email: 758922096@qq.com
+  skip_cleanup: true
+  api_key:
+    secure: PsgyTi8AbXkbLtCE5e/4ZmiohIQPMPY+CKS1KV7MQF5WtNMSWIiXY9NdNKxZX5mHb8svEDZ8A+xI9cGhznn9ujXl4tlswbJTDtziBgDXtL9nA9gb2OOsjXtfEfS7wgMwgc35mRfHukOK6MNF5YgC7IjZXYopik2nwwyPiDBslyvgvfw1vGc3G7h6tpWUf1W+P7RoxDwDywLErGmqAJS9yBoRYY8x1jDUXX3R3zRNC3T0+3QP0PtzgoMthneaEMfubtHupDgjJUFkjuMmvSWR8JQ8eCtCLUEn9n3OmXL/eJzSwPlmXjIU6tHCv9QIp/MsK0AHwcuZSlh62wjaFh+349SyEm+XAtt89QeS9dgS6LZss/SO1xiiV0UsnZP9l/vk+xx0BknRzfvqUCbWKgcgmWWTju8qNYiSZzLfSn6Fqn+wmK8YIIi7lA+DU9ixBdynXqjq0BUy2SlfXKc4O1TdJ0iuvkxqdFUDuXPhURQ9YqZ7paO+CGwYpR+zmWBp7/Tf6Mx2+so5nKgbVg2VWKOYKpwHNcoXWMMa39EEKPFlaU8/mQ//F7+KcTXn4Xv9Nc9CgImlQ4cLv67GYMFQGsLBGnGelXZgQf08zbzsKIMwtjbC9tAWHXzfz405j/OXEyBGreQPJ1UpE1UgXSGhBLNvktAbUYkfxaNWcNUy2oQElBE=
+  on:
+    tags: true
+    branch: master
+   tag: latest
