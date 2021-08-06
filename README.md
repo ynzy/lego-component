@@ -1,14 +1,27 @@
 # lego-component
 
-```js
-"husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test"
-    }
-  },
-```
+# 特性
 
-\$ git tag -a v.1.0.7 -m "version 1.0.7"
+- typescript
+- Vue3
+- 单元测试
+- 提交发布前验证
+- travis 实现自动发布
+
+```js
+git tag -a v.1.0.7 -m "version 1.0.7"
+
+# npm 版本号
+// version = v1.0.0
+npm version patch
+// v1.0.1
+npm version prepatch
+// v1.0.2-0
+npm version minor
+// v1.1.0
+npm version major
+// v2.0.0
+```
 
 ## Project setup
 
