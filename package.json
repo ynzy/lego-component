@@ -29,7 +29,8 @@
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist",
-    "prepublishOnly": "npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "core-js": "^3.6.5",
