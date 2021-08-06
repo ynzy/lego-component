@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - node
+deploy:
+  provider: npm
+  email: 758922096@qq.com
+  api_key:
+    secure: mfHNQwrtOEnYIVACpKlesta9sQTOecRccKe6gqdPm4vntUqGZ7hmUd9/dwm/gvpxnoYiGxRLAgHinxAIO3Xk5nVJFLbiE77yrq9iWIW0VzRWSe+EVSL39ojPDK3XQPNQoNjeCY2ehKhlIqP1y1Oaz+j1MhK9uvsmefH8UXvIk4jeHw2ENq61XIua6TyX6TpPrwgu46RjvJCbXtJHZv8v+wM59A6a9N9ex48EgMwfreD3RM2zl3ya5uAgEVLzOT2OVNJHdZ1nWhHZFJjTLU/EaB4Bbkw4QBj4zKtBVWlTACRU8EHYFgQcGvhtxzCKHbj9tlis6mWRdQVpo3EosXW7voO4nJOWI/SKxdocu4+x0DiCIcInKg4rFA+6/GBxoPBQft6jXhIYYTkhSfRhZI+uAZJMATamOW0iPxxSV+SuFCoZfM7g3gC0Hfaht9q4Gj14r3cCeWbQpRWdY7kGz4pm4/HXeo68AZoyRYlW9XnOtRmYo++RcpNv8i1K//fIiNpdC5UmA3qzg1d/8F7ILU54YIi7hKf0NtswM1BA/lm67/LwDjZh6cVCtBnd3TrU4YgbGsm80EWnWeMZw1E5dc2YOlg31POmwwta9i5NlfIQaUHm6FfUF2msd6BrJr7wFH3vexZHv80b7KEcWEQvjH5nSDWV+ZL6kY4If4/uQH5GggI=
+  on:
+    tags: true
+    repo: ynzy/lego-component
+    branch: main
+  skip_cleanup: "true"
+  tag: latest
