@@ -67,7 +67,9 @@ export interface TextComponentProps extends CommonComponentProps {
 export interface ImageComponentProps extends CommonComponentProps {
   src: string;
 }
-
+export interface ShapeComponentProps extends CommonComponentProps {
+  backgroundColor: string;
+}
 export const textDefaultProps: TextComponentProps = {
   // basic props - font styles
   text: "正文内容",
@@ -87,7 +89,10 @@ export const imageDefaultProps: ImageComponentProps = {
   src: "test.url",
   ...commonDefaultProps,
 };
-
+export const shapeDefaultProps: ShapeComponentProps = {
+  backgroundColor: "",
+  ...commonDefaultProps,
+};
 /**
  * 剔除一些属性，只保留样式属性
  * without 创建一个剔除所有给定值的新数组，剔除值的时候，使用SameValueZero做相等比较,返回一个新数组
@@ -101,6 +106,12 @@ export const textStylePropNames = without(
 export const imageStylePropsNames = without(
   Object.keys(imageDefaultProps),
   "src"
+);
+
+export const shapeStylePropsNames = without(
+  Object.keys(imageDefaultProps),
+  "actionType",
+  "url"
 );
 
 /**
