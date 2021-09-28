@@ -8,10 +8,15 @@
 - 提交发布前验证
 - travis 实现自动发布
 
+# 提交 tag 自动发布
+
 ```js
 git tag -a v.1.0.7 -m "version 1.0.7"
+```
 
 # npm 版本号
+
+```js
 // version = v1.0.0
 npm version patch
 // v1.0.1
