@@ -4,10 +4,10 @@
   </component>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import useComponentCommon from '../../hooks/useComponentCommon'
-import { transformToComponentProps, textDefaultProps, textStylePropNames } from '../../defaultProps'
-const defaultProps = transformToComponentProps(textDefaultProps)
+import { defineComponent } from 'vue';
+import useComponentCommon from '../../hooks/useComponentCommon';
+import { transformToComponentProps, textDefaultProps, textStylePropNames } from '../../defaultProps';
+const defaultProps = transformToComponentProps(textDefaultProps);
 // array that contains style props
 export default defineComponent({
   name: 'l-text',
@@ -21,13 +21,13 @@ export default defineComponent({
   setup (props) {
     // 重用并且简化
     // 抽离并且获得 styleProps
-    const { styleProps, handleClick} = useComponentCommon(props, textStylePropNames)
+    const { styleProps, handleClick} = useComponentCommon(props, textStylePropNames);
     return {
        styleProps,
        handleClick
-    }
+    };
   }
-})
+});
 </script>
 
 <style scoped>

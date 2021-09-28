@@ -17,8 +17,8 @@ export default defineComponent({
     console.log(inject('test'));
     
     onMounted(()=>{
-      getCurrentInstance()?.appContext.config.globalProperties.$echo()
-    })
+      getCurrentInstance()?.appContext.config.globalProperties.$echo();
+    });
   }
 });
 </script>

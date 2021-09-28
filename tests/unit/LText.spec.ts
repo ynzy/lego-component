@@ -43,6 +43,7 @@ describe("LText.vue", () => {
       actionType: "url",
       url: "http://dummy.url",
       tag: "h2",
+      isEditing: false,
     };
     const wrapper = shallowMount(LText, { props });
     expect(wrapper.element.tagName).toBe("H2");
