@@ -11,6 +11,8 @@
 # 提交 tag 自动发布
 
 ```js
+git add .
+git commit -m "feat:发布新版本"
 git tag -a v.1.0.7 -m "version 1.0.7"
 git push --tags # 推送tag
 ```
