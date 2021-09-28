@@ -12,6 +12,7 @@
 
 ```js
 git tag -a v.1.0.7 -m "version 1.0.7"
+git push --tags # 推送tag
 ```
 
 # npm 版本号
