@@ -43,7 +43,7 @@ function myExample() {
 const overrides = {
   compilerOptions: { declaration: true, },
   // 如果不包含"src/App.vue","src/main.ts",打包的時候会包一层src
-  exclude: [ "node_modules",'tests/**/*.ts', 'tests/**/*.tsx' ]
+  exclude: ["node_modules", 'tests/**/*.ts', 'tests/**/*.tsx']
 }
 export { name, file }
 export default {
@@ -56,7 +56,7 @@ export default {
   plugins: [
     // myExample(),
     nodeResolve(),
-    typescript({tsconfigOverride: overrides}),
+    typescript({ tsconfigOverride: overrides }),
     vue(),
     postcss({
       extract: 'bundle.css',
@@ -64,7 +64,7 @@ export default {
         autoprefixer({ overrideBrowserslist: ['> 0.15% in CN'] }) // 自动添加css前缀
       ]
     }),
-    // css({output: 'bundle.css'})
+    css({ output: 'bundle.css' })
   ],
   external: ['vue', 'lodash-es'],
   /* external: (id) => {
